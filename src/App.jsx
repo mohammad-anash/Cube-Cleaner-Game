@@ -3,11 +3,10 @@ import { Physics, RigidBody, InstancedRigidBodies } from '@react-three/rapier';
 import { useRef, useState, useEffect } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
-import { time } from 'three/tsl';
 
 function CreateGeometrys({ onRef }) {
   const [cubes, setCubes] = useState(() =>
-    Array.from({ length: 20 }, (_, i) => ({
+    Array.from({ length: 10 }, (_, i) => ({
       index: i,
       position: [Math.random() * 20 - 10, 0.5, Math.random() * 20 - 10],
       color: new THREE.Color(Math.random(), Math.random(), Math.random()),
